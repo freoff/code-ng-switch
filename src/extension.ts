@@ -47,7 +47,7 @@ export function activate(context: vscode.ExtensionContext) {
     }
 
     var openFilePath: string = pathArr.join("/");
-    vscode.window.activeTextEditor?.hide();
+    // vscode.window.activeTextEditor?.hide();
     var vsCodeOpenPath: vscode.Uri = vscode.Uri.file(openFilePath);
     vscode.workspace.openTextDocument(vsCodeOpenPath).then((doc) => {
       vscode.window.showTextDocument(doc);
